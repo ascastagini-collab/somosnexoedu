@@ -33,3 +33,80 @@
 .founder-photo{margin-bottom:30px;max-width:430px}
 .founder-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 37%;border-radius:150px 150px 10px 10px;box-shadow:12px 12px 0 #dfe7d7}
 @media(max-width:760px){.founder-photo{max-width:390px;margin-inline:auto}.founder-photo img{object-position:center 34%}}
+
+/* Correções de layout 11-10-2026 */
+.hero-visual .photo-frame img{object-position:center 34%}
+
+/* Portfólio: mais respiro entre projetos e links */
+.portfolio-grid{gap:28px}
+.portfolio-grid article{padding:32px;min-height:320px}
+.portfolio-grid h3{margin-bottom:18px}
+.portfolio-grid p{margin-bottom:0}
+.portfolio-grid .text-link{
+  margin-top:28px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  border-bottom:0;
+  width:100%;
+  display:block;
+}
+.portfolio-grid .text-link:hover{text-decoration:underline}
+
+/* Seção de autoridade: elimina vazio e distribui credenciais */
+.founder{
+  display:grid;
+  grid-template-columns:minmax(300px,.78fr) minmax(0,1.22fr);
+  gap:56px 72px;
+  align-items:start;
+  border-top:1px solid var(--line);
+}
+.founder-photo{
+  margin:0;
+  max-width:none;
+  align-self:start;
+}
+.founder-photo img{
+  width:100%;
+  max-height:680px;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center 34%;
+  border-radius:150px 150px 10px 10px;
+  box-shadow:12px 12px 0 #dfe7d7;
+}
+.founder-content{min-width:0}
+.founder-content h2{margin-bottom:22px}
+.founder-content h3{margin-top:34px;margin-bottom:10px}
+.founder-link{display:inline-block;margin-top:8px}
+.founder .credentials{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+  padding:30px 0 0;
+  margin-top:0;
+  border-top:1px solid var(--line);
+  border-bottom:0;
+}
+.founder .credentials>div{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:24px 22px;
+  min-height:118px;
+}
+.founder .credentials b{font-size:27px}
+.founder .credentials span{display:block;margin-top:5px;line-height:1.35}
+
+@media(max-width:900px){
+  .portfolio-grid{gap:22px}
+  .founder{grid-template-columns:1fr;gap:34px}
+  .founder-photo{max-width:520px;margin-inline:auto}
+  .founder .credentials{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  .portfolio-grid article{padding:26px;min-height:auto}
+  .portfolio-grid .text-link{margin-top:22px;padding-top:14px}
+  .founder-photo{max-width:420px}
+  .founder .credentials{grid-template-columns:1fr}
+  .founder .credentials>div{min-height:auto}
+}
