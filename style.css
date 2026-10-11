@@ -29,3 +29,7 @@
 .authority-list b{display:block;font-family:Manrope,Arial,sans-serif;font-size:16px;margin-bottom:5px}
 .authority-list span{display:block;font-size:14px;line-height:1.5;color:#45655d}
 @media(max-width:760px){.caption{min-width:78%;max-width:92%}.photo-frame img{object-position:center 34%}}
+
+.founder-photo{margin-bottom:30px;max-width:430px}
+.founder-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 37%;border-radius:150px 150px 10px 10px;box-shadow:12px 12px 0 #dfe7d7}
+@media(max-width:760px){.founder-photo{max-width:390px;margin-inline:auto}.founder-photo img{object-position:center 34%}}
